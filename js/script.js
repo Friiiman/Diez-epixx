@@ -1,14 +1,24 @@
 $(document).ready(function(){
 
-	$('.burger, .header_nav_list').click(function(){
-	  $('.header_nav_list').toggleClass('menu_opened');
+	$('#burger, .header_nav_list').click(function(){
+		$('.header_nav_list').toggleClass('menu_opened');
+		$('#burger').toggleClass('burger-hide');
+		$('#burger-close').toggleClass('burger-hide');
 	})
-	$(document).click(function(event) {
-	    if ($(event.target).closest(".burger").length ) return;
-	    $('.header_nav_list').removeClass('menu_opened');
-	    event.stopPropagation();
-	});
 
+	$('#burger-close').click(function(){
+		$('.header_nav_list').removeClass('menu_opened');
+		$('#burger').toggleClass('burger-hide');
+		$(this).toggleClass('burger-hide');
+	})
+
+	// $(document).click(function(event) {
+	// 	if ($(event.target).closest(".burger").length ) return;
+	// 	$('.header_nav_list').removeClass('menu_opened');
+	// 	event.stopPropagation();
+	// });
+
+// -------------------------------------------
 
 	var slickIsActive = false;
 
