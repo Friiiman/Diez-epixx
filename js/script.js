@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 	function checkSlider(){
 
-		if( $(window).width() < 1279 ) {
+		if( $(window).width() < 1260 ) {
 			if( slickIsActive === false ) {
 				$("#slider").slick();
 				slickIsActive = true;
